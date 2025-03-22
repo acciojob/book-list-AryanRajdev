@@ -27,10 +27,12 @@ myform.addEventListener("submit", (event) => {
   isbnCell.textContent = isbn;
   newrow.appendChild(isbnCell);
 
+  let deleteCell = document.createElement('td');
   let deleteBtn = document.createElement("button");
   deleteBtn.classList.add("delete");
   deleteBtn.textContent = "X";
-  newrow.appendChild(deleteBtn);
+  deleteCell.appendChild(deleteBtn);
+  newrow.appendChild(deleteCell);
 
   tbody.appendChild(newrow);
 
